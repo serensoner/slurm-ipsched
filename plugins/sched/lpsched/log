@@ -1,0 +1,89 @@
+
+Model name:  '' - run #1    
+Objective:   Maximize(R0)
+ 
+SUBMITTED
+Model size:       68 constraints,      55 variables,          180 non-zeros.
+Sets:                                   0 GUB,                  0 SOS.
+ 
+Using DUAL simplex for phase 1 and PRIMAL simplex for phase 2.
+The primal and dual simplex pricing strategy set to 'Devex'.
+ 
+
+Relaxed solution                  15 after         30 iter is B&B base.
+ 
+Feasible solution                 15 after         30 iter,         0 nodes (gap 0.0%)
+ 
+Optimal solution                  15 after         30 iter,         0 nodes (gap 0.0%).
+
+Excellent numeric accuracy ||*|| = 0
+
+ MEMO: lp_solve version 5.5.2.0 for 32 bit OS, with 64 bit REAL variables.
+      In the total iteration count 30, 8 (26.7%) were bound flips.
+      There were 1 refactorizations, 0 triggered by time and 1 by density.
+       ... on average 22.0 major pivots per refactorization.
+      The largest [LUSOL v2.2.1.0] fact(B) had 119 NZ entries, 1.0x largest basis.
+      The maximum B&B level was 1, 0.0x MIP order, 1 at the optimal solution.
+      The constraint matrix inf-norm is 24, with a dynamic range of 24.
+      Time to load data was 0.001 seconds, presolve used 0.000 seconds,
+       ... 0.001 seconds in simplex solver, in total 0.002 seconds.
+
+Actual values of the variables:
+s_1                             1
+s_2                             1
+s_3                             1
+x_1_1                           0
+x_1_2                           0
+x_1_3                           8
+x_2_1                           0
+x_2_2                           0
+x_2_3                           8
+x_3_1                           0
+x_3_2                           0
+x_3_3                           8
+x_4_1                           0
+x_4_2                           8
+x_4_3                           0
+x_5_1                           0
+x_5_2                           8
+x_5_3                           0
+x_6_1                           8
+x_6_2                           0
+x_6_3                           0
+x_7_1                           0
+x_7_2                           0
+x_7_3                           0
+x_8_1                           0
+x_8_2                           0
+x_8_3                           0
+t_1_1                           0
+t_1_2                           0
+t_1_3                           0
+t_1_4                           0
+t_1_5                           0
+t_1_6                           1
+t_1_7                           0
+t_1_8                           0
+t_2_1                           0
+t_2_2                           0
+t_2_3                           0
+t_2_4                           1
+t_2_5                           1
+t_2_6                           0
+t_2_7                           0
+t_2_8                           0
+t_3_1                           1
+t_3_2                           1
+t_3_3                           1
+t_3_4                           0
+t_3_5                           0
+t_3_6                           0
+t_3_7                           0
+t_3_8                           0
+c_1                      0.111111
+c_2                      0.222222
+c_3                      0.333333
+C55                             0
+1: 8/6 
+2: 8/4 8/5 
+3: 8/1 8/2 8/3 

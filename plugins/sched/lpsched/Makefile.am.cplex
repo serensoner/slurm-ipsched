@@ -1,0 +1,32 @@
+# Makefile for backfill scheduler plugin
+
+AUTOMAKE_OPTIONS = foreign
+
+SYSTEM = $(shell echo $(build_cpu) | $(SED) -e "s/_/-/g" | $(SED) -e "s/i686/x86/g" )
+LIBFORMAT  = static_pic
+
+CPLEXDIR      = /home/seren/ILOG/CPLEX_Studio_AcademicResearch122/cplex
+CONCERTDIR    = /home/seren/ILOG/CPLEX_Studio_AcademicResearch122/concert
+
+CPLEXBINDIR   = $(CPLEXDIR)/bin/$(BINDIST)
+CPLEXLIBDIR   = $(CPLEXDIR)/lib/$(SYSTEM)_sles10_4.1/$(LIBFORMAT)
+CONCERTLIBDIR = $(CONCERTDIR)/lib/$(SYSTEM)_sles10_4.1/$(LIBFORMAT)
+
+CCLNFLAGS = -L$(CPLEXLIBDIR) -lilocplex -lcplex -L$(CONCERTLIBDIR) -lconcert -pthread
+
+CONCERTINCDIR = $(CONCERTDIR)/include
+CPLEXINCDIR   = $(CPLEXDIR)/include
+
+CCFLAGS = $(CCOPT) -I$(CPLEXINCDIR) -I$(CONCERTINCDIR)
+
+PLUGIN_FLAGS = -module -avoid-version --export-dynamic -lm -ldl $(CCLNFLAGS)
+
+INCLUDES = -I$(top_srcdir) -I$(top_srcdir)/src/common -I./ $(CCFLAGS)
+
+pkglib_LTLIBRARIES = sched_lp.la
+
+sched_lp_la_SOURCES = lpsched_wrapper.c	\
+			lpsched.c \
+solver_cplex.c
+
+sched_lp_la_LDFLAGS = $(SO_LDFLAGS) $(PLUGIN_FLAGS)

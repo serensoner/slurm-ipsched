@@ -1,0 +1,17 @@
+--- ../src/plugins/sched/Makefile.am	2011-09-12 17:07:40.000000000 +0300
+@@ -1,3 +1,3 @@
+ # Makefile for scheduler plugins
+ 
+-SUBDIRS = backfill builtin hold wiki wiki2
++SUBDIRS = backfill builtin hold wiki wiki2 lpsched
+
+--- ../src/plugins/select/Makefile.am	2011-09-12 17:07:40.000000000 +0300
+@@ -4,7 +4,7 @@
+ BLUEGENE = bluegene
+ endif
+ 
+-SUBDIRS = $(BLUEGENE) cons_res cray linear
++SUBDIRS = $(BLUEGENE) cons_res cray linear lpconsres
+ 
+ # Each plugin here needs a plugin_id, here are the currect plug_ids
+ # for each plugin.

@@ -1,0 +1,41 @@
+# Makefile for backfill scheduler plugin
+
+AUTOMAKE_OPTIONS = foreign
+
+CXXFLAGS = -fexceptions
+
+PLUGIN_FLAGS = -module -avoid-version --export-dynamic -lm -ldl
+
+INCLUDES = -I$(top_srcdir) -I$(top_srcdir)/src/common -I./
+
+pkglib_LTLIBRARIES = sched_lp.la
+
+sched_lp_la_SOURCES = lpsched_wrapper.c	\
+			lpsched.c \
+solver_lpsolve.c \
+lp_LUSOL.c \
+lusol.c \
+colamd.c \
+ini.c \
+commonlib.c \
+mmio.c \
+myblas.c \
+lp_crash.c \
+lp_Hash.c \
+lp_lib.c \
+lp_matrix.c \
+lp_MDO.c \
+lp_mipbb.c \
+lp_MPS.c \
+lp_params.c \
+lp_presolve.c \
+lp_price.c \
+lp_pricePSE.c \
+lp_report.c \
+lp_scale.c \
+lp_simplex.c \
+lp_SOS.c \
+lp_utils.c \
+lp_wlp.c 
+
+sched_lp_la_LDFLAGS = $(SO_LDFLAGS) $(PLUGIN_FLAGS)

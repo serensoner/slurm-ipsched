@@ -9,7 +9,7 @@ Contact seren.soner@gmail.com, ozturaca@boun.edu.tr if necessary
 
 - USE CPLEX WHENEVER AVAILABLE. In order to use cplex, first go to the plugins/sched/lpsched directory, copy Makefile.am.cplex to Makefile.am. If you wish to use lpsolve, copy Makefile.am.lpsolve to Makefile.am. Afterwards, run autogen.sh, ./configure, and make install. If CPLEX is selected, the license address of cplex should be given in slurm.conf in the following way: 
 
-	SchedulerParameters=cplex_lic=/share/apps/ILOG/CPLEX_Studio/AcademicResearch122/licenses/access.ilm
+	`SchedulerParameters=cplex_lic=/share/apps/ILOG/CPLEX_Studio/AcademicResearch122/licenses/access.ilm`
 
 - max_job_count can also be set to limit the number of jobs handled in every single ILP solve of the scheduler. By default, it is 200.
 
